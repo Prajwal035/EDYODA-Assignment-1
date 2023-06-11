@@ -1,0 +1,26 @@
+1)
+SELECT * FROM department WHERE NAME LIKE 'A%';
+
+2)SELECT *
+FROM salespeople
+where Snum in (selct * 
+               from orders
+               where AMT > 2000);
+
+3)SELECT count(*)
+FROM salesman
+WHERE city = 'New York';
+
+4)SELECT commission
+FROM salesman
+WHERE salesman_id IN
+    (SELECT salesman_id 
+     FROM customer
+     WHERE city = 'Paris' AND city='London');
+
+5)SELECT ord_date,salesman_id,COUNT(*) 
+FROM orders 
+GROUP BY ord_date,salesman_id;
+
+
+
